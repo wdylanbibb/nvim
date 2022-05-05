@@ -203,10 +203,10 @@ _G.packer_plugins = {
     path = "/Users/wdylanbibb/.local/share/nvim/site/pack/packer/start/targets.vim",
     url = "https://github.com/wellle/targets.vim"
   },
-  ["telescope-ctags-outline"] = {
+  ["telescope-ctags-outline.nvim"] = {
     loaded = true,
-    path = "/Users/wdylanbibb/.local/share/nvim/site/pack/packer/start/telescope-ctags-outline",
-    url = "https://github.com/fcying/telescope-ctags-outline"
+    path = "/Users/wdylanbibb/.local/share/nvim/site/pack/packer/start/telescope-ctags-outline.nvim",
+    url = "https://github.com/fcying/telescope-ctags-outline.nvim"
   },
   ["telescope.nvim"] = {
     config = { " require('plugins/telescope') " },
@@ -238,42 +238,30 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: rust-tools.nvim
-time([[Config for rust-tools.nvim]], true)
- require('plugins/rust-tools') 
-time([[Config for rust-tools.nvim]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
  require('plugins/cmp') 
 time([[Config for nvim-cmp]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
- require('plugins/telescope') 
-time([[Config for telescope.nvim]], false)
--- Config for: nvim-lsp-installer
-time([[Config for nvim-lsp-installer]], true)
- require('plugins/lsp_installer_nvim') 
-time([[Config for nvim-lsp-installer]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
  require('plugins/which-key') 
 time([[Config for which-key.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
- require('plugins/treesitter') 
-time([[Config for nvim-treesitter]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
- require('plugins/nvim-tree') 
-time([[Config for nvim-tree.lua]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
- require('plugins/lspconfig') 
-time([[Config for nvim-lspconfig]], false)
 -- Config for: lspkind-nvim
 time([[Config for lspkind-nvim]], true)
  require('plugins/lspkind') 
 time([[Config for lspkind-nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+ require('plugins/lspconfig') 
+time([[Config for nvim-lspconfig]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+ require('plugins/telescope') 
+time([[Config for telescope.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+ require('plugins/nvim-tree') 
+time([[Config for nvim-tree.lua]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
  require('plugins/lualine') 
@@ -282,6 +270,18 @@ time([[Config for lualine.nvim]], false)
 time([[Config for LuaSnip]], true)
  require('plugins/luasnip') 
 time([[Config for LuaSnip]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+ require('plugins/treesitter') 
+time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-lsp-installer
+time([[Config for nvim-lsp-installer]], true)
+ require('plugins/lsp_installer_nvim') 
+time([[Config for nvim-lsp-installer]], false)
+-- Config for: rust-tools.nvim
+time([[Config for rust-tools.nvim]], true)
+ require('plugins/rust-tools') 
+time([[Config for rust-tools.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
