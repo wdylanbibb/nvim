@@ -44,7 +44,8 @@ return require("packer").startup {
 			"nvim-telescope/telescope.nvim",
 			requires = {
 				"nvim-lua/plenary.nvim",
-				"BurntSushi/ripgrep"
+				"BurntSushi/ripgrep",
+				"fcying/telescope-ctags-outline"
 			},
 			config = [[ require('plugins/telescope') ]]
 		}
