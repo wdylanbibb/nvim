@@ -127,6 +127,27 @@ return require("packer").startup {
 			"tpope/vim-fugitive"
 		}
 
+		use {
+			"psliwka/vim-smoothie"
+		}
+
+		use {
+			"rktjmp/highlight-current-n.nvim"
+		}
+
+		use {
+			"numToStr/Comment.nvim",
+			config = [[ require('plugins/Comment') ]]
+		}
+
+		use {
+			"tanvirtin/vgit.nvim",
+			requires = {
+				"nvim-lua/plenary.nvim"
+			},
+			config = [[ require('plugins/vgit') ]]
+		}
+
 		if packer_bootstrap then
 		require("packer").sync()
 		end

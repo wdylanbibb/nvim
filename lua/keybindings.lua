@@ -37,6 +37,7 @@ map("n", "<Leader>ff", "<cmd>Telescope find_files<CR>")
 map("n", "<Leader>fg", "<cmd>Telescope live_grep<CR>")
 map("n", "<Leader>fb", "<cmd>Telescope buffers<CR>")
 map("n", "<Leader>fh", "<cmd>Telescope help_tags<CR>")
+map("n", "<Leader>ft", "<cmd>Telescope ctags_outline outline<CR>")
 
 -- language server
 map("n", "<Leader>vg", "<cmd>lua vim.lsp.buf.definition()<CR>")

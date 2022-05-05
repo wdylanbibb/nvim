@@ -4,10 +4,10 @@ local set = vim.opt -- global options
 local cmd = vim.cmd -- execute Vim commands
 
 cmd('autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=grey') -- to Show whitespace, MUST be inserted BEFORE the colorscheme command
--- vim.g.nord_disable_background = true
--- vim.g.nord_contrast = true
--- vim.g.nord_borders = true
-require('nord').set()         
+vim.g.nord_disable_background = true
+vim.g.nord_contrast = true
+vim.g.nord_borders = true
+require('nord').set()
 
 set.wrap = false -- don't automatically wrap on load
 set.number = true -- show line numbers
@@ -21,3 +21,13 @@ set.softtabstop = 4
 set.mouse = "a"
 set.splitbelow = true
 set.splitright = true
+
+set.list = false
+
+-- highlight on yank
+exec([[
+  augroup YankHighlight
+    autocmd!
+    autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=500, on_visual=true}
+  augroup end
+]], false)

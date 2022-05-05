@@ -19,7 +19,8 @@ wk.register({
 		f = 'Find File',
 		g = 'Live Grep',
 		b = 'Search Buffers',
-		h = 'Search Help'
+		h = 'Search Help',
+		t = 'Search Tags'
 	},
 	v = {
 		name = 'Language server',
