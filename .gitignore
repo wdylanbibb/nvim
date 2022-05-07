@@ -1,2 +1,3 @@
 # Add plugin folder created by Packer, run :PackerCompile and :PackerInstall to set up plugins
 plugin/
+node_modules/

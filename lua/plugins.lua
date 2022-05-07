@@ -21,20 +21,6 @@ return require("packer").startup {
 		}
 
 		use {
-			-- status line
-			"nvim-lualine/lualine.nvim",
-			requires = {"kyazdani42/nvim-web-devicons", opt = true},
-			config = [[ require('plugins/lualine') ]]
-		}
-
-		use {
-			-- file tree
-			"kyazdani42/nvim-tree.lua",
-			requires = "kyazdani42/nvim-web-devicons",
-			config = [[ require('plugins/nvim-tree') ]]
-		}
-
-		use {
 			-- displays possible key bindings
 			"folke/which-key.nvim",
 			config = [[ require('plugins/which-key') ]]
@@ -49,11 +35,6 @@ return require("packer").startup {
 			},
 			config = [[ require('plugins/telescope') ]]
 		}
-
-		-- use {
-			-- "fcying/telescope-ctags-outline.nvim",
-			-- config = [[ require('plugins/telescope-ctags-outline') ]]
-		-- }
 
 		use {
 			"neovim/nvim-lspconfig",
@@ -146,6 +127,21 @@ return require("packer").startup {
 				"nvim-lua/plenary.nvim"
 			},
 			config = [[ require('plugins/vgit') ]]
+		}
+
+		use {
+			"preservim/nerdtree",
+			requires = {
+				"Xuyuanp/nerdtree-git-plugin",
+				"ryanoasis/vim-devicons"
+			},
+			config = [[ require('plugins/nerdtree') ]]
+		}
+
+		use {
+			"nvim-lualine/lualine.nvim",
+			requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+			config = [[ require('plugins/lualine') ]]
 		}
 
 		if packer_bootstrap then
