@@ -10,6 +10,10 @@ if fn.empty(fn.glob(install_path)) > 0 then
 		fn.system({"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path})
 end
 
+-- Normally this would go in configs but it has to do with sourcing and compiling plugins so it goes here
+local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
+vim.api.nvim_create_autocmd('BufWritePost', { command = 'source <afile> | PackerCompile', group = packer_group, pattern = 'init.lua' })
+
 return require("packer").startup {
 	function(use)
 		-- Packer can manage itself
@@ -36,6 +40,8 @@ return require("packer").startup {
 			},
 			config = [[ require('plugins/telescope') ]]
 		}
+
+		use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
 		use {
 			"neovim/nvim-lspconfig",
@@ -99,6 +105,14 @@ return require("packer").startup {
 
 		use {
 			"tpope/vim-surround",
+		}
+
+		use {
+			"tpope/vim-endwise"
+		}
+
+		use {
+			"rstacruz/vim-closer"
 		}
 
 		use {
