@@ -37,6 +37,7 @@ return require("packer").startup {
 				"nvim-lua/plenary.nvim",
 				"BurntSushi/ripgrep",
 				"fcying/telescope-ctags-outline.nvim",
+				"kdheepak/lazygit.nvim",
 			},
 			config = [[ require('plugins/telescope') ]]
 		}
