@@ -31,7 +31,8 @@ return require("packer").startup {
 			requires = {
 				"nvim-lua/plenary.nvim",
 				"BurntSushi/ripgrep",
-				"fcying/telescope-ctags-outline.nvim"
+				"fcying/telescope-ctags-outline.nvim",
+				"nvim-telescope/telescope-ui-select.nvim"
 			},
 			config = [[ require('plugins/telescope') ]]
 		}
@@ -143,6 +144,27 @@ return require("packer").startup {
 			requires = { 'kyazdani42/nvim-web-devicons', opt = true },
 			config = [[ require('plugins/lualine') ]]
 		}
+
+		use {
+			"rcarriga/nvim-notify",
+			config = [[ require('plugins/notify') ]]
+		}
+
+		use {
+			"stevearc/dressing.nvim"
+		}
+
+		use {
+			"max397574/better-escape.nvim"
+		}
+
+		-- use {
+			-- "neoclide/coc.nvim",
+			-- branch = "master",
+			-- run = "yarn install --frozen-lockfile"
+		-- }
+
+		-- END OF PLUGINS --
 
 		if packer_bootstrap then
 		require("packer").sync()
