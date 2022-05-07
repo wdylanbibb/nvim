@@ -37,7 +37,6 @@ return require("packer").startup {
 				"nvim-lua/plenary.nvim",
 				"BurntSushi/ripgrep",
 				"fcying/telescope-ctags-outline.nvim",
-				"nvim-telescope/telescope-ui-select.nvim"
 			},
 			config = [[ require('plugins/telescope') ]]
 		}
@@ -183,11 +182,6 @@ return require("packer").startup {
 		use {
 			"rcarriga/nvim-notify",
 			config = [[ require('plugins/notify') ]]
-		}
-
-		-- dressing.nvim: Changes vim.ui interfaces
-		use {
-			"stevearc/dressing.nvim"
 		}
 
 		-- better-escape.nvim: Allows for escaping insert mode quicker
