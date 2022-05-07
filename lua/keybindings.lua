@@ -7,8 +7,12 @@ map('i', '<C-BS>', '<C-W')
 
 -- wrap
 map('n', '<Leader>w', '<C-w>w')
+map('n', '<Leader>q', '<cmd>qa<CR>')
 map('n', 'j', 'gj')
 map('n', 'k', 'gk')
+
+-- lazygit
+map('n', '<Leader>gg', '<cmd>LazyGit<CR>')
 
 -- navigation
 --- behave like other capitals

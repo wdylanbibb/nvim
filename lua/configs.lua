@@ -24,14 +24,6 @@ set.splitright = true
 
 set.list = false
 
--- auto open folds
--- exec([[
-	-- augroup OpenFolds
-		-- autocmd!
-		-- autocmd BufReadPost,FileReadPost * echo "hello"
-	-- augroup end
--- ]], false)
-
 -- highlight on yank
 exec([[
 	augroup YankHighlight
@@ -40,14 +32,14 @@ exec([[
 	augroup end
 ]], false)
 
--- exec([[
-	-- augroup TreeStart
-		-- autocmd StdinReadPre * let s:std_in=1
-		-- autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
-		-- autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
-		-- autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') | execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
-	-- augroup end
--- ]], false)
+exec([[
+	augroup TreeStart
+		autocmd StdinReadPre * let s:std_in=1
+		autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+		autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+		autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') | execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+	augroup end
+]], false)
 
 -- exec([[
 	-- augroup TreeClose
