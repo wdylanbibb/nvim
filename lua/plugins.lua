@@ -19,17 +19,18 @@ return require("packer").startup {
 		-- Packer can manage itself
 		use "wbthomason/packer.nvim"
 
+		-- nord: colorscheme I like
 		use {
-			-- colorscheme I like :)
 			"shaunsingh/nord.nvim"
 		}
 
+		-- whick-key: displays possible key bindings
 		use {
-			-- displays possible key bindings
 			"folke/which-key.nvim",
 			config = [[ require('plugins/which-key') ]]
 		}
 
+		-- telescope: Fuzzy finder
 		use {
 			"nvim-telescope/telescope.nvim",
 			requires = {
@@ -41,13 +42,16 @@ return require("packer").startup {
 			config = [[ require('plugins/telescope') ]]
 		}
 
+		-- telescope-fzf-native: Telescope plugin for fzf
 		use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
+		-- nvim-lspconfig: Configuration for language server
 		use {
 			"neovim/nvim-lspconfig",
 			config = [[ require('plugins/lspconfig') ]]
 		}
 
+		-- nvim-lsp-installer: Installer for language servers
 		use {
 			"williamboman/nvim-lsp-installer",
 			requires = {
@@ -56,12 +60,13 @@ return require("packer").startup {
 			config = [[ require('plugins/lsp_installer_nvim') ]]
 		}
 
+		-- lspkind-nvim: vscode-like pictograms for neovim lsp completion items Topics
 		use {
-			-- vscode-like pictograms for neovim lsp completion items Topics
 			"onsails/lspkind-nvim",
 			config = [[ require('plugins/lspkind') ]]
 		}
 
+		-- nvim-cmp: Code Completion for neovim (plus plugins)
 		use {
 			"hrsh7th/nvim-cmp",
 			requires = {
@@ -76,10 +81,12 @@ return require("packer").startup {
 			config = [[ require('plugins/cmp') ]]
 		}
 
+		-- vim-vsnip: VSCode(LSP)'s snippet feature
 		use {
 			"hrsh7th/vim-vsnip"
 		}
 
+		-- nvim-treesitter: Parser tool (highlighting, folding, indents)
 		use {
 			"nvim-treesitter/nvim-treesitter",
 			run = ":TSUpdate",
@@ -90,6 +97,7 @@ return require("packer").startup {
 			config = [[ require('plugins/treesitter') ]]
 		}
 
+		-- LuaSnip: snippet engine
 		use {
 			"L3MON4D3/LuaSnip",
 			requires = {
@@ -98,44 +106,54 @@ return require("packer").startup {
 			config = [[ require('plugins/luasnip') ]]
 		}
 
+		-- rust-tools.nvim: Utilities for Rust (using rust-analyzer)
 		use {
 			"simrat39/rust-tools.nvim",
 			config = [[ require('plugins/rust-tools') ]]
 		}
 
+		-- vim-surround: Helpful commands for surrounding text objects
 		use {
 			"tpope/vim-surround",
 		}
 
+		-- vim-endwise: Ends certain structures automatically
 		use {
 			"tpope/vim-endwise"
 		}
 
+		-- vim-closer: Closes parentheses, brackets, etc.
 		use {
 			"rstacruz/vim-closer"
 		}
 
+		-- targets.vim: Provides additional text targets for vim
 		use {
 			"wellle/targets.vim"
 		}
 
+		-- vim-fugitive: Vim Git integration
 		use {
 			"tpope/vim-fugitive"
 		}
 
+		-- vim-smoothie: Smooth scrolling
 		use {
 			"psliwka/vim-smoothie"
 		}
 
+		-- highlight-current-n.nvim: Highlights the current term being searched in a buffer
 		use {
 			"rktjmp/highlight-current-n.nvim"
 		}
 
+		-- Commend.nvim: allows for commenting via command
 		use {
 			"numToStr/Comment.nvim",
 			config = [[ require('plugins/Comment') ]]
 		}
 
+		-- vgit.nvim: Visual git integration
 		use {
 			"tanvirtin/vgit.nvim",
 			requires = {
@@ -144,6 +162,7 @@ return require("packer").startup {
 			config = [[ require('plugins/vgit') ]]
 		}
 
+		-- NERDTree: File tree (with some git integration for showing added, deleted, or changed files)
 		use {
 			"preservim/nerdtree",
 			requires = {
@@ -153,21 +172,25 @@ return require("packer").startup {
 			config = [[ require('plugins/nerdtree') ]]
 		}
 
+		-- lualine.nvim: Fast and simple statusline
 		use {
 			"nvim-lualine/lualine.nvim",
 			requires = { 'kyazdani42/nvim-web-devicons', opt = true },
 			config = [[ require('plugins/lualine') ]]
 		}
 
+		-- nvim-notify: Fancy notifications
 		use {
 			"rcarriga/nvim-notify",
 			config = [[ require('plugins/notify') ]]
 		}
 
+		-- dressing.nvim: Changes vim.ui interfaces
 		use {
 			"stevearc/dressing.nvim"
 		}
 
+		-- better-escape.nvim: Allows for escaping insert mode quicker (I can't get it to work for whatever reason)
 		use {
 			"max397574/better-escape.nvim"
 		}
