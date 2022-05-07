@@ -190,9 +190,12 @@ return require("packer").startup {
 			"stevearc/dressing.nvim"
 		}
 
-		-- better-escape.nvim: Allows for escaping insert mode quicker (I can't get it to work for whatever reason)
+		-- better-escape.nvim: Allows for escaping insert mode quicker
 		use {
-			"max397574/better-escape.nvim"
+			"max397574/better-escape.nvim",
+			config = function()
+				require("better_escape").setup()
+			end
 		}
 
 		-- use {
