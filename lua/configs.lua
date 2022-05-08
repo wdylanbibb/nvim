@@ -24,6 +24,10 @@ set.splitright = true
 
 set.list = false
 
+-- have a fixed column for the diagnostics to appear in
+-- his removes the jitter when warnings/errors flow in
+set.signcolumn = "yes"
+
 -- highlight on yank
 exec([[
 	augroup YankHighlight
@@ -40,6 +44,10 @@ exec([[
 		autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') | execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
 	augroup end
 ]], false)
+
+cmd([[
+	au BufReadPost,FileReadPost * normal zR
+]])
 
 -- exec([[
 	-- augroup TreeClose
