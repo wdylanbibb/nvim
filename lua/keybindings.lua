@@ -33,8 +33,9 @@ map("n", "<Leader>?", ":WhichKey<CR>")
 map("n", "<Leader>a", ":cclose<CR>")
 
 -- nvim tree
-map("n", "<Leader>tt", "<cmd>NERDTreeToggle<cr>")
-map("n", "<Leader>tf", "<cmd>NERDTreeFocus<cr>")
+map("n", "<Leader>tt", "<cmd>NvimTreeToggle<cr>")
+map("n", "<Leader>tf", "<cmd>NvimTreeFindFileToggle<cr>")
+map("n", "<Leader>tr", "<cmd>NvimTreeRefresh<cr>")
 
 -- Telescope
 map("n", "<Leader>ff", "<cmd>Telescope find_files<CR>")

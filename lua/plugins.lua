@@ -164,12 +164,11 @@ return require("packer").startup {
 
 		-- NERDTree: File tree (with some git integration for showing added, deleted, or changed files)
 		use {
-			"preservim/nerdtree",
+			"kyazdani42/nvim-tree.lua",
 			requires = {
-				"Xuyuanp/nerdtree-git-plugin",
-				"ryanoasis/vim-devicons"
+				"kyazdani42/nvim-web-devicons",
 			},
-			config = [[ require('plugins/nerdtree') ]]
+			config = [[ require('plugins/nvim-tree') ]]
 		}
 
 		-- lualine.nvim: Fast and simple statusline
