@@ -14,6 +14,7 @@ end
 local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePost', { command = 'source <afile> | PackerCompile', group = packer_group, pattern = 'init.lua' })
 
+
 return require("packer").startup {
 	function(use)
 		-- Packer can manage itself
@@ -43,7 +44,7 @@ return require("packer").startup {
 		}
 
 		-- telescope-fzf-native: Telescope plugin for fzf
-		use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+		-- use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
 		-- nvim-lspconfig: Configuration for language server
 		use {
